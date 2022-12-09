@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "issue-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheeruk99/Issue-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dheeruk99/Issue-Tracker/issues"
+  },
+  "homepage": "https://github.com/dheeruk99/Issue-Tracker#readme",
+  "description": ""
+}
