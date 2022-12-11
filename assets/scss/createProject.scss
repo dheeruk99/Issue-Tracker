@@ -1,0 +1,45 @@
+body {
+  background-color: aqua;
+}
+
+#createProject {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1.3rem;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  label {
+    width: 120px;
+  }
+  input,
+  textarea {
+    font-size: 15px;
+    padding: 3px;
+    border: 1px solid blue;
+    margin: 3px 0px;
+    display: block;
+    width: 430px;
+  }
+  button {
+    background-color: white;
+    border: none;
+    padding: 5px;
+    font-size: 1.05rem;
+    position: relative;
+    top: 10px;
+    left: 430px;
+    border-radius: 5px;
+    &:hover {
+      background-color: orange;
+    }
+  }
+}

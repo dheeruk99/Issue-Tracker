@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="css/home.css" />
+   
+    <div id="project-display">
+        <h1>Projects</h1>
+        <%for(i of locals.projects){%>
+            
+                <div id="project-container">
+                <button id="project">
+                    <p id="name"><b>Project Name:</b> <%=i.Name%></p>
+                    <p id="author">Author: <%=i.Author%></p>
+                    <p id="description"><b>Description:</b> <%=i.Description%></p>
+                </button>
+                </div>
+        <%}%>
+    </div>
+    
+

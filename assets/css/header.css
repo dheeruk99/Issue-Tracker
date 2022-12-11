@@ -1,0 +1,16 @@
+#header {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  #header h2 {
+    margin-left: 30px; }
+  #header button {
+    margin-right: 30px;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    background-color: white;
+    border: none; }
+    #header button:hover {
+      background-color: aqua; }
