@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/projectDetails.css" />
+<div id="project-details">
+                <div id="project-container">
+                        <div id="project" >
+                            <p id="name"><b>Project Name:</b> <%=locals.project.Name%></p>
+                            <p id="author">Author: <%=locals.project.Author%></p>
+                            <p id="description"><b>Description:</b> <%=locals.project.Description%></p>
+                            <button id="createIssue" >Create an issue</button>
+                        </div>
+                </div>
+                <div id="issue">
+                       <form id="issueForm" method="POST">
+                        <input type="hidden" name="id" value=<%=locals.project._id%>>
+                       </form>
+                </div>
+
+                <h1>Issues</h1>
+                <div id="Issue-display">
+                        
+                </div>
+</div>
+<script src="/js/issue.js"></script>

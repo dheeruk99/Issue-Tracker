@@ -1,7 +1,8 @@
 #project-display {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 60px; }
   #project-display button {
     padding: 0px;
     border: 0px;

@@ -3,7 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1; }
   #header h2 {
     margin-left: 30px; }
   #header button {
