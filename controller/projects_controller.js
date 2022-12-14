@@ -45,7 +45,6 @@ module.exports.addIssue = async (req,res)=>{
     let project = await Projects.findById(req.body.id);
     project.Issues.push(issue)
     project.save();
-
     
     if(req.xhr){
       return res.status(200).json({

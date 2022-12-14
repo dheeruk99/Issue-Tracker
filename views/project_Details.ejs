@@ -1,22 +1,41 @@
 <link rel="stylesheet" type="text/css" href="/css/projectDetails.css" />
-<div id="project-details">
-                <div id="project-container">
-                        <div id="project" >
-                            <p id="name"><b>Project Name:</b> <%=locals.project.Name%></p>
-                            <p id="author">Author: <%=locals.project.Author%></p>
-                            <p id="description"><b>Description:</b> <%=locals.project.Description%></p>
+<div class="project-details">
+                <div class="project-container">
+                        <div class="project" >
+                            <p class="name"><b>Project Name:</b> <%=locals.project.Name%></p>
+                            <p class="author">Author: <%=locals.project.Author%></p>
+                            <p class="description"><b>Description:</b> <%=locals.project.Description%></p>
                             <button id="createIssue" >Create an issue</button>
                         </div>
                 </div>
-                <div id="issue">
+                <div class="Issue-form-container">
                        <form id="issueForm" method="POST">
                         <input type="hidden" name="id" value=<%=locals.project._id%>>
                        </form>
                 </div>
 
                 <h1>Issues</h1>
+
                 <div id="Issue-display">
-                        
+                    <%for(i of Issue){%>
+                        <div id=`<%=i._id%>`>
+                            <div id="Issue" >
+                                <p class="Issue-Title"><b>Title:</b> <%=i.Title%></p>
+                                <p class="Issue-Author">Author: <%=i.Author%></p>
+                                <p class="Issue-Description"><b>Description:</b> <%=i.Description%></p>
+                                <div  class="Issue-Category">
+                                    <%if(i.Category){%>
+                                        <span>Category: </span>
+                                        <%for(j of i.Category){%>
+                                            <span><%=j%>,</span>
+                                            <%}%>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    <%}%>
                 </div>
+
+            
 </div>
 <script src="/js/issue.js"></script>

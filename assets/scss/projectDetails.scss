@@ -2,24 +2,27 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    background-color: rgb(19, 147, 147);
 }
-#project{
+.project-containier{
+  margin-top: 60px;
+}
+.project{
     background-color: lightgray;
     font-size: 1.3rem;
     width: 700px;
-    border: 1px solid black;
-    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
     margin-top: 80px;
-    #name{
+    .name{
         border-bottom: 1px solid black;
         margin-left: 10px;
     }
-    #author{
+    .author{
         color:gray;
         margin-left: 10px;
     }
-    #description{
+    .description{
         margin-left: 10px;
     }
     button {
@@ -42,7 +45,7 @@ body{
 
 //issue 
 
-  #issue {
+  .Issue-form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +57,7 @@ body{
       display: flex;
       flex-wrap: wrap;
       width: 600px;
-      border: 1px solid black;
+      border-radius: 10px;
       padding: 15px;
       border-radius: 10px;
     }
@@ -81,14 +84,19 @@ body{
       font-size: 1.05rem;
       position: relative;
       top: 10px;
-      left: 430px;
+      left: 370px;
       border-radius: 5px;
       margin-bottom: 15px;
+      border-radius: 10px;
       &:hover {
         background-color: orange;
       }
     }
-    #checkbox-container{
+    #close{
+      margin-left: 10px;
+
+    }
+    .checkbox-container{
         label{
             display: inline;
         }
@@ -101,4 +109,36 @@ body{
     }
    
   }
+
+  
+   
+    #issue{
+        background-color: rgb(245, 125, 125);
+        font-size: 1.3rem;
+        width: 700px;
+        border-radius: 10px;
+        margin-bottom: 70px;
+        display: inline-block;
+        margin-bottom: 50px;
+        .Issue-Title{
+          width: 680px;
+          border-bottom: 1px solid black;
+          margin-left: 10px;
+      }
+      .Issue-Author{
+          color:gray;
+          margin-left: 10px;
+      }
+      .Issue-Description{
+          margin-left: 10px;
+      }
+      .Issue-Category{
+        margin-left: 10px;
+        margin-bottom: 15px;
+      }
+     
+    }
+  
+
+  
   

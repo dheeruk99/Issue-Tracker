@@ -2,24 +2,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aqua; }
+  background-color: #139393; }
 
-#project {
+.project-containier {
+  margin-top: 60px; }
+
+.project {
   background-color: lightgray;
   font-size: 1.3rem;
   width: 700px;
-  border: 1px solid black;
-  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 10px;
   margin-top: 80px; }
-  #project #name {
+  .project .name {
     border-bottom: 1px solid black;
     margin-left: 10px; }
-  #project #author {
+  .project .author {
     color: gray;
     margin-left: 10px; }
-  #project #description {
+  .project .description {
     margin-left: 10px; }
-  #project button {
+  .project button {
     position: relative;
     left: 500px;
     padding: 5px 15px;
@@ -28,29 +31,29 @@ body {
     background-color: white;
     border: none;
     z-index: 0; }
-    #project button:hover {
+    .project button:hover {
       background-color: aqua; }
 
-#issue {
+.Issue-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   font-size: 1.3rem; }
-  #issue #form {
+  .Issue-form-container #form {
     background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
     width: 600px;
-    border: 1px solid black;
+    border-radius: 10px;
     padding: 15px;
     border-radius: 10px; }
-  #issue label {
+  .Issue-form-container label {
     width: 120px;
     margin-bottom: 20px; }
-  #issue input,
-  #issue textarea {
+  .Issue-form-container input,
+  .Issue-form-container textarea {
     font-size: 15px;
     padding: 3px;
     border: 1px solid black;
@@ -59,7 +62,7 @@ body {
     display: block;
     width: 430px;
     margin-bottom: 20px; }
-  #issue button {
+  .Issue-form-container button {
     background-color: #e74545;
     color: white;
     border: none;
@@ -67,16 +70,40 @@ body {
     font-size: 1.05rem;
     position: relative;
     top: 10px;
-    left: 430px;
+    left: 370px;
     border-radius: 5px;
-    margin-bottom: 15px; }
-    #issue button:hover {
+    margin-bottom: 15px;
+    border-radius: 10px; }
+    .Issue-form-container button:hover {
       background-color: orange; }
-  #issue #checkbox-container {
+  .Issue-form-container #close {
+    margin-left: 10px; }
+  .Issue-form-container .checkbox-container {
     width: 400px; }
-    #issue #checkbox-container label {
+    .Issue-form-container .checkbox-container label {
       display: inline; }
-    #issue #checkbox-container input {
+    .Issue-form-container .checkbox-container input {
       display: inline;
       width: 20px;
       margin: 0; }
+
+#issue {
+  background-color: #f57d7d;
+  font-size: 1.3rem;
+  width: 700px;
+  border-radius: 10px;
+  margin-bottom: 70px;
+  display: inline-block;
+  margin-bottom: 50px; }
+  #issue .Issue-Title {
+    width: 680px;
+    border-bottom: 1px solid black;
+    margin-left: 10px; }
+  #issue .Issue-Author {
+    color: gray;
+    margin-left: 10px; }
+  #issue .Issue-Description {
+    margin-left: 10px; }
+  #issue .Issue-Category {
+    margin-left: 10px;
+    margin-bottom: 15px; }

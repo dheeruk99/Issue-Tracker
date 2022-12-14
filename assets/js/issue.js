@@ -1,4 +1,9 @@
 {
+         closeForm=()=>{
+                $('#form').remove();
+                createIssue.prop('disabled', false);
+        }
+
     let createIssue = $("#createIssue");
     createIssue.click(function (e) {
       e.preventDefault();
@@ -14,9 +19,9 @@
         <input type ="text" name="Author" placeholder="Author" required>
         
         <label>Category</label>
-        <div id="checkboxes">
+        <div class="checkboxes">
                 
-                <div id="checkbox-container">
+                <div class="checkbox-container">
                         <div>
                                 <label for="performanceBugs">Performance Bugs</label>
                                 <input type="checkbox" name="Category" value="Performance Bugs">
@@ -52,7 +57,8 @@
                
         </div>
 
-        <button type="submit">Create Issue</button>
+        <button id="addIssue" type="submit">Create Issue</button>
+        <button id="close" onClick="closeForm()" >Close</button>
 </div>
         `)
         createIssue.prop('disabled', true)
@@ -65,15 +71,33 @@
     let form = $("#issueForm");
     form.submit(function(e){
         e.preventDefault();
-        
         $.ajax({
-                
                 type:"POST",
                 url:"/addIssue",
                 data:form.serialize(),
         }).done((data)=>{
-                console.log(data.data.issue);
+                $('#form').remove();
+                createIssue.prop('disabled', false);
+                  $('#Issue-display').prepend(`
+                  <div id=${data.data.issue._id}>
+                  <div id="Issue" >
+                  <p class="Issue-Title"><b>Title:</b> ${data.data.issue.Title}</p>
+                  <p class="Issue-Author">Author: ${data.data.issue.Author}</p>
+                  <p class="Issue-Description"><b>Description:</b> ${data.data.issue.Description}</p>
+                  <div  class="Issue-Category">
+                          <span>Category: </span>
+                              <span>
+                              ${data.data.issue.Category.map((value)=>`<span>${value}</span>`)}
+                              </span> 
+                  </div>
+                  </div>
+                  </div>
+                  `)  
+
         })
     })
+
+
+   
 }
   
